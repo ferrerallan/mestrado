@@ -1,0 +1,54 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "example",
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "code": "unconfirmed"
+      }
+    ]
+  },
+  "type": "food",
+  "category": ["food"],
+  "patient": {
+    "reference": "Patient/example",
+    "display": "João"
+  },
+  "onset": "2023-10-24T00:00:00Z",
+  "note": [
+    {
+      "text": "João, 29 years old, reported discomfort and itching after consuming a sandwich with peanut butter. No history of peanut consumption or other known food allergies. Advised to avoid peanuts and received instructions on self-injectable adrenaline for possible future anaphylaxis."
+    }
+  ],
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "418290006",
+              "display": "Itching (finding)"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "699376002",
+              "display": "Lip swelling (finding)"
+            }
+          ]
+        }
+      ],
+      "severity": "moderate",
+      "description": "Discomfort and itching after consuming a sandwich with peanut butter, signs of hives and lip swelling observed."
+    }
+  ]
+}
