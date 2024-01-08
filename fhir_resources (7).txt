@@ -1,0 +1,86 @@
+{
+        "resourceType" : "Patient",
+        "id" : "example",
+        "active" : true,
+        "birthDate" : "1991-04-20",
+        "gender" : "female"
+    },
+    {
+        "resourceType" : "Condition",
+        "code" : {
+            "coding" : [{
+                "system" : "http://snomed.info/sct",
+                "code" : "21522001",
+                "display" : "Dor abdominal"
+            }]
+        },
+        "subject" : {
+            "reference" : "Patient/example"
+        },
+        "clinicalStatus" : {
+            "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code" : "active"
+            }]
+        }
+    },
+    {
+        "resourceType" : "Condition",
+        "code" : {
+            "coding" : [{
+                "system" : "http://snomed.info/sct",
+                "code" : "80757009",
+                "display" : "Síndrome do intestino irritável"
+            }]
+        },
+        "subject" : {
+            "reference" : "Patient/example"
+        },
+        "clinicalStatus" : {
+            "coding" : [{
+                "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code" : "active"
+            }]
+        }
+    },
+    {
+        "resourceType" : "MedicationStatement",
+        "dosage": [{
+            "method" : {
+                "coding" : [{
+                    "system" : "http://snomed.info/sct",
+                    "code" : "26663004",
+                    "display" : "Oral"
+                }]
+            },
+            "doseAndRate" : [{
+                "doseQuantity" : {
+                    "value" : 200,
+                    "unit" : "mg",
+                    "system" : "http://unitsofmeasure.org",
+                    "code" : "mg"
+                }
+            }],
+            "timing" : {
+                "repeat" : {
+                    "boundsPeriod" : {
+                        "start" : "20 minutes before each meal"
+                    },
+                    "frequency" : 3,
+                    "period" : 1,
+                    "periodUnit" : "d"
+                }
+            }
+        }],
+        "medicationCodeableConcept" : {
+            "coding" : [{
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A03AA04",
+                "display" : "Mebeverina"
+            }]
+        },
+        "subject" : {
+            "reference" : "Patient/example"
+        }
+    }
+]

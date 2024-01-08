@@ -1,0 +1,54 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "gender": "male",
+            "birthDate": "1976-01-01",
+            "active": true
+        },
+        {
+            "resourceType": "MedicationStatement",
+            "medicationCodeableConcept": {
+                "coding": [{
+                    "system": "http://hl7.org/fhir/sid/ndc",
+                    "code": "Atenolol 50mg"
+                }]
+            },
+            "dosage": [{
+                "text": "Tomar 1 comprimido por dia pela manhã"
+            }]
+        },
+        {
+            "resourceType": "Condition",
+            "code": {
+                "coding": [{
+                    "system": "http://snomed.info/sct",
+                    "code": "38341003",
+                    "display": "Hypertension"
+                }]
+            },
+            "clinicalStatus": {
+                "coding": [{
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active"
+                }]
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "code": {
+                "coding": [{
+                    "system": "http://snomed.info/sct",
+                    "code": "22298006",
+                    "display": "Chest pain"
+                }]
+            },
+            "clinicalStatus": {
+                "coding": [{
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active"
+                }]
+            }
+        }
+    ]
+}
