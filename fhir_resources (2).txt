@@ -1,0 +1,46 @@
+{
+        "resourceType" : "Patient",
+        "id" : "example",
+        "birthDate" : "1989-01-01",
+        "active" : true
+    },
+    {
+        "resourceType" : "AllergyIntolerance",
+        "recordedDate" : "2024-10-03",
+        "substance" : {
+            "coding" : [{
+                "code": "Food",
+                "display" : "Amendoim"
+            }],
+            "text" : "Amendoim"
+        },
+        "reaction" : [{
+            "manifestation" : [{
+                "coding" : [{
+                    "code": "Skin",
+                    "display" : "Urticária"
+                }],
+                "text" : "Urticária"
+            }, {
+                "coding" : [{
+                    "code": "Respi",
+                    "display" : "Dificuldade Respiratória"
+                }],
+                "text" : "Dificuldade Respiratória"
+            }, {
+                "coding" : [{
+                    "code": "General",
+                    "display" : "Edema de Glote"
+                }],
+                "text" : "Edema de Glote"
+            }],
+            "severity" : "severe",
+            "exposureDate" : "2024-15-03"
+        }],
+        "note" : [{
+            "authorString" : "Unknown",
+            "time" : "2024-10-03",
+            "text" : "O paciente teve sua primeira reação alérgica a amendoins aos 30 anos, caracterizada por urticária e dificuldade respiratória. A gravidade aumentou ao longo dos anos, com o último episódio incluindo edema de glote, exigindo intervenção médica de emergência. Não há histórico de asma ou outras alergias alimentares. A alergia a amendoins foi confirmada através de testes cutâneos e exames laboratoriais específicos."
+        }]
+    }
+]
