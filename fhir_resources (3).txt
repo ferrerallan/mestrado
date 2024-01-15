@@ -1,67 +1,54 @@
 {
-        "resourceType": "Patient",
-        "active": true,
-        "name": [
-            {
-                "use": "official",
-                "given": ["Patient's First name"]
-            }
+  "resources": [
+    {"resourceType": "Patient",
+     "id": "example",
+     "active": true,
+     "name": [{"use": "official"}]
+    },
+    {"resourceType": "Condition",
+      "subject": {"reference": "Patient/example"},
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "386661006",
+            "display": "Fever"
+          }
         ],
-        "gender": "male",
-        "birthDate": "1976-12-25"
+        "text": "Fever"
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      }
     },
-    {
-        "resourceType": "MedicationStatement",
-        "subject": {
-            "reference": "Patient/pat1"          
-        },   
-        "effectiveDateTime" : "2021-12-05"
-    },
-    {
-        "resourceType": "Condition",
-        "clinicalStatus": {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                    "code": "active"
-                }
-            ]
-        },
-        "verificationStatus": {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-                    "code": "confirmed"
-                }
-            ]
-        },
-        "subject": {
-            "reference": "Patient/pat1"
-        }       
-    },
-    {
-        "resourceType": "AllergyIntolerance",
-        "clinicalStatus": {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
-                    "code": "active",
-                    "display": "Active"
-                }
-            ]
-        },
-        "verificationStatus": {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
-                    "code": "confirmed",
-                    "display": "Confirmed"
-                }
-            ]
-        },
-        "patient": {
-            "reference": "Patient/pat1"
-        }        
-    }
-]
-Nota: o termo "Patient's First name" é um placeholder para o primeiro nome inserido, que não é fornecido na descrição do problema.
+    {"resourceType": "Condition",
+      "subject": {"reference": "Patient/example"},
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "422587007",
+            "display": "Nausea "
+          }
+        ],
+        "text": "Nausea"
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      }
+      }
+  ]
+}
+```
+
+Cada sintoma é uma instância do recurso "Condition", referenciando o recurso "Patient". Para este exemplo, estou assumindo que os sintomas são confirmados (o que é indicado no campo 'verificationStatus'). Também, usei os códigos SNOMED para 'febre' e 'náusea'. Pode ser necessário fazer ajustes dependendo da precisão adicional necessária.

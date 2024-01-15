@@ -1,0 +1,82 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "2",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "21522001",
+                        "display": "Pain in abdomen"
+                    }
+                ],
+                "text": "Patient reports abdominal pain"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "3",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "162467007",
+                        "display": "Pain in neck"
+                    }
+                ],
+                "text": "Patient reports neck pain"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        },
+        {
+            "resourceType": "Patient",
+            "id": "gerlably",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "4",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "37796009",
+                        "display": "Acute migraine"
+                    }
+                ],
+                "text": "Gerlably has migraine"
+            },
+            "subject": {
+                "reference": "Patient/gerlably"
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "5",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "422400008",
+                        "display": "Vomiting"
+                    }
+                ],
+                "text": "Gerlably sometimes has vomiting"
+            },
+            "subject": {
+                "reference": "Patient/gerlably"
+            }
+        }
+    ]
+}

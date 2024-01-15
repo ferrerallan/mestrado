@@ -1,0 +1,59 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "reports",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "abdominalpain",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "21522001",
+                        "display": "Abdominal Pain"
+                    }
+                ],
+                "text": "Abdominal Pain"
+            },
+            "subject": {
+                "reference": "Patient/reports"
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "migraine",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "37796009",
+                        "display": "Migraine"
+                    }
+                ],
+                "text": "Migraine"
+            },
+            "subject": {
+                "reference": "Patient/reports"
+            }
+        }
+    ]
+}

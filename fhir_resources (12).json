@@ -1,0 +1,80 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "001",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": null,
+                        "display": "Nenhum conceito encontrado."
+                    }
+                ],
+                "text": "Patient has difficulty urinating"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        },
+        {
+            "resourceType": "Procedure",
+            "id": "002",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "427749007",
+                        "display": "History of operative procedure on knee (situation)"
+                    }
+                ],
+                "text": "Patient had knee surgery"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "003",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "712831003",
+                        "display": "Frequent headache (finding)"
+                    }
+                ],
+                "text": "Patient said she has a frequent headache"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        },
+        {
+            "resourceType": "AllergyIntolerance",
+            "id": "004",
+            "category": [
+                "food"
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "91935009",
+                        "display": "Allergy to peanut (finding)"
+                    }
+                ],
+                "text": "Patient reports allergy to peanuts"
+            },
+            "patient": {
+                "reference": "Patient/1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "unknown",
+            "birthDate": "unknown"
+        },
+        {
+            "resourceType": "AllergyIntolerance",
+            "id": "example",
+            "category": [
+                "food"
+            ],
+            "criticality": "high",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "256350009",
+                        "display": "Peanut - dietary (substance)"
+                    }
+                ]
+            },
+            "patient": {
+                "reference": "Patient/1"
+            },
+            "onsetDateTime": "unknown",
+            "reaction": [
+                {
+                    "substance": {
+                        "coding": [
+                            {
+                                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                "code": "256350009",
+                                "display": "Peanut allergenic extract Injectable Product"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

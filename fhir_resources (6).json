@@ -1,0 +1,66 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "unknown"
+        },
+        {
+            "resourceType": "AllergyIntolerance",
+            "id": "example",
+            "category": [
+                "food"
+            ],
+            "criticality": "unknown",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "unknown",
+                        "display": "shrimp"
+                    }
+                ]
+            },
+            "patient": {
+                "reference": "Patient/1"
+            },
+            "onsetDateTime": "unknown",
+            "reaction": [
+                {
+                    "substance": {
+                        "coding": [
+                            {
+                                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                "code": "unknown",
+                                "display": "shrimp"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Condition",
+            "id": "example",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "unknown"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "unknown",
+                        "display": "headache, irritation, nausea and reddish skin"
+                    }
+                ],
+                "text": "headache, irritation, nausea and reddish skin"
+            }
+        }
+    ]
+}

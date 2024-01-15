@@ -1,51 +1,38 @@
 {
-        "resourceType" : "Patient",
-        "id" : "patient-example",
-        "gender": "male",
-        "birthDate": "1975-01-01"
+  "resources": [
+    {
+      "resourceType": "Patient",
+      "id": "example",
+      "active": true
     },
     {
-        "resourceType": "Condition",
-        "clinicalStatus": {
-            "coding": [
-                {"system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active"}
-            ]
-        },
-        "code": {
-            "coding": [
-                {"system": "http://snomed.info/sct", "code": "123456", "display": "Cansaço frequente"}
-            ]
-        },
-        "subject": { "reference": "Patient/patient-example" }
-    },
-    {
-        "resourceType": "Condition",
-        "clinicalStatus": {
-            "coding": [
-                {"system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active"}
-            ]
-        },
-        "code": {
-            "coding": [
-                {"system": "http://snomed.info/sct", "code": "123456", "display": "Dor no peito esporádica"}
-            ]
-        },
-        "subject": { "reference": "Patient/patient-example" }
-     },
-     {
-        "resourceType" : "FamilyMemberHistory",
-        "id" : "example",
-        "patient" : {
-            "reference" : "Patient/patient-example"
-        },
-        "condition" : [{
-            "code" : {
-                "coding" : [{
-                    "system" : "http://snomed.info/sct",
-                    "code" : "123456",
-                    "display" : "Doença cardíaca"
-                }]
-            }
-        }]
+      "resourceType": "Condition",
+      "id": "example2",
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "25064002",
+            "display": "Headache (finding)"
+          }
+        ],
+        "text": "dor de cabeça"
+      },
+      "subject": {
+        "reference": "Patient/example"
+      }
     }
-]
+  ]
+}
+```
+
+Note que em "code" o SNOMED-CT foi usado, que é um sistema de códigos médicos, e "25064002" é o código para dor de cabeça. No entanto, este JSON pode variar de acordo com as circunstâncias do paciente. Por exemplo, o status de ativação do paciente, o ID e outros detalhes. O mesmo se aplica ao ID da condição.
+Por favor, lembre-se disso é apenas uma sugestão e o uso final de FHIR dependerá dos detalhes específicos do caso médico.

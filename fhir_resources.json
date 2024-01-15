@@ -1,0 +1,36 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "male",
+            "birthDate": "1974-12-25"
+        },
+        {
+            "resourceType": "Condition",
+            "id": "example001",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "25064002",
+                        "display": "Headache"
+                    }
+                ],
+                "text": "Headache"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        }
+    ]
+}
