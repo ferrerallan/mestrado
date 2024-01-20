@@ -1,57 +1,42 @@
 {
-    "resourceType": "Patient",
-    "text": {
-        "status": "generated"
+  "resources": [
+    {
+      "resourceType": "Patient",
+      "id": "example",
+      "active": true,
+      "gender": "unknown"
     },
-    "gender": "female",
-    "birthDate": "1991-01-01"
-},
-{
-    "resourceType": "Condition",
-    "text": {
-        "status": "generated"
-    },
-    "code": {
+    {
+      "resourceType": "Condition",
+      "id": "example001",
+      "verificationStatus": {
         "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "code": "21522001",
-                "display": "Recurrent abdominal pain"
-            },
-            {
-                "system": "http://snomed.info/sct",
-                "code": "56731001",
-                "display": "Diarrhea"
-            },
-            {
-                "system": "http://snomed.info/sct",
-                "code": "236069006",
-                "display": "Constipation"
-            }
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "unknown"
+          }
         ]
-    },
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                    "code": "complaint",
-                    "display": "Complaint"
-                }
-            ]
-        }
-    ],
-    "clinicalStatus": {
+      },
+      "code": {
         "coding": [
-            {
-                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                "code": "active",
-                "display": "Active"
-            }
-        ]
-    },
-    "subject": {
+          {
+            "system": "http://snomed.info/sct",
+            "code": "25064002",
+            "display": "Headache"
+          }
+        ],
+        "text": "Dor de cabeça"
+      },
+      "subject": {
         "reference": "Patient/example"
+      }
     }
+  ]
 }
-]
+```
+
+Nesse fragmento de código, o primeiro bloco com "resourceType": "Patient" representa informações básicas sobre o paciente. Note que definimos o "id" como "example" e o gênero como "unknown" porque não temos esses detalhes a partir da sentença fornecida.
+
+O segundo bloco com "resourceType": "Condition" representa a condição relatada pelo paciente: dor de cabeça. Usamos um código SNOMED CT para "Headache" e definimos o "text" como "Dor de cabeça". O campo "subject" conecta essa condição ao paciente.
+
+Lembre-se de que este é um exemplo e pode variar com base no contexto e na quantidade de informações fornecidas na sentença inicial.

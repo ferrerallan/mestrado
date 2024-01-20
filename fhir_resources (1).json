@@ -1,0 +1,36 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "male",
+            "birthDate": "1981-01-01"
+        },
+        {
+            "resourceType": "Condition",
+            "id": "example",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "239873007",
+                        "display": "Pain in joint of knee"
+                    }
+                ],
+                "text": "Dor no joelho"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            }
+        }
+    ]
+}

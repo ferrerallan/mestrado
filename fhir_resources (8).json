@@ -1,0 +1,60 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "condition001",
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "37796009",
+                        "display": "migraine"
+                    }
+                ],
+                "text": "Patient reports migraine."
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "condition002",
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "21522001",
+                        "display": "abdominal pain"
+                    }
+                ],
+                "text": "Patient reports abdominal pain."
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "condition003",
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "271594007",
+                        "display": "fainting"
+                    }
+                ],
+                "text": "Patient sometimes has fainting."
+            }
+        }
+    ]
+}

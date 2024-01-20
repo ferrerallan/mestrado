@@ -1,46 +1,72 @@
 {
-        "resourceType" : "Patient",
-        "id" : "example",
-        "birthDate" : "1989-01-01",
-        "active" : true
+  "resources": [
+    {
+      "resourceType": "Patient",
+      "id": "example",
+      "active": true,
+      "name": [
+        {
+          "use": "official",
+          "family": "Chalmers",
+          "given": ["Peter", "James"]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1974-12-25"
     },
     {
-        "resourceType" : "AllergyIntolerance",
-        "recordedDate" : "2024-10-03",
-        "substance" : {
-            "coding" : [{
-                "code": "Food",
-                "display" : "Amendoim"
-            }],
-            "text" : "Amendoim"
-        },
-        "reaction" : [{
-            "manifestation" : [{
-                "coding" : [{
-                    "code": "Skin",
-                    "display" : "Urticária"
-                }],
-                "text" : "Urticária"
-            }, {
-                "coding" : [{
-                    "code": "Respi",
-                    "display" : "Dificuldade Respiratória"
-                }],
-                "text" : "Dificuldade Respiratória"
-            }, {
-                "coding" : [{
-                    "code": "General",
-                    "display" : "Edema de Glote"
-                }],
-                "text" : "Edema de Glote"
-            }],
-            "severity" : "severe",
-            "exposureDate" : "2024-15-03"
-        }],
-        "note" : [{
-            "authorString" : "Unknown",
-            "time" : "2024-10-03",
-            "text" : "O paciente teve sua primeira reação alérgica a amendoins aos 30 anos, caracterizada por urticária e dificuldade respiratória. A gravidade aumentou ao longo dos anos, com o último episódio incluindo edema de glote, exigindo intervenção médica de emergência. Não há histórico de asma ou outras alergias alimentares. A alergia a amendoins foi confirmada através de testes cutâneos e exames laboratoriais específicos."
-        }]
+      "resourceType": "Condition",
+      "id": "example",
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "7007006",
+            "display": "Symptom Nausea"
+          }
+        ],
+        "text": "Nausea"
+      },
+      "subject": {
+        "reference": "Patient/example"
+      },
+      "onsetDateTime": "Morning"
+    },
+    {
+      "resourceType": "Condition",
+      "id": "example",
+      "verificationStatus": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+            "code": "confirmed"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "414915002",
+            "display": "Obesity"
+          }
+        ],
+        "text": "Obesity"
+      },
+      "subject": {
+        "reference": "Patient/example"
+      }
     }
-]
+  ]
+}
+```
+
+Por favor, note que código SNOMED para "Náusea" e "Obesidade" são apenas exemplos e, em uso real, você precisará obter o valor correto do sistema SNOMED CT. Também conquanto a hora do dia que o paciente vomitou é apenas um exemplo aproximado; em um caso real, você teria que usar um formato de data/hora completo para o "onsetDateTime".

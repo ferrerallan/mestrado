@@ -1,0 +1,43 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true
+        },
+        {
+            "resourceType": "Condition",
+            "id": "condition1",
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "25064002",
+                        "display": "Headache (finding)"
+                    }
+                ],
+                "text": "Patient claims headache."
+            }
+        },
+        {
+            "resourceType": "Condition",
+            "id": "condition2",
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "15387003",
+                        "display": "Vomiting (disorder)"
+                    }
+                ],
+                "text": "Patient claims vomiting."
+            }
+        }
+    ]
+}

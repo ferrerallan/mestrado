@@ -1,0 +1,62 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "female",
+            "birthDate": "1991-01-01"
+        },
+        {
+            "resourceType": "AllergyIntolerance",
+            "id": "2",
+            "category": [
+                "food"
+            ],
+            "criticality": "high",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "shellfish-allergy",
+                        "display": "Shellfish Allergy"
+                    }
+                ]
+            },
+            "patient": {
+                "reference": "Patient/1"
+            },
+            "onsetDateTime": "2021-06-15",
+            "reaction": [
+                {
+                    "substance": {
+                        "coding": [
+                            {
+                                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                "code": "shellfish",
+                                "display": "Shellfish"
+                            }
+                        ]
+                    },
+                    "manifestation": [
+                        {
+                            "coding": [
+                                {
+                                    "code": "Vomiting",
+                                    "system": "http://snomed.info/sct",
+                                    "display": "Vomiting"
+                                },
+                                {
+                                    "code": "Headache",
+                                    "system": "http://snomed.info/sct",
+                                    "display": "Headache"
+                                }
+                            ],
+                            "text": "Vomiting and headache due to shellfish allergy"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

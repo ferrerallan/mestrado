@@ -1,0 +1,37 @@
+{
+    "resources": [
+        {
+            "resourceType": "Patient",
+            "id": "1",
+            "active": true,
+            "gender": "unknown",
+            "birthDate": "unknown"
+        },
+        {
+            "resourceType": "Condition",
+            "id": "example",
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                        "code": "unconfirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "25064002",
+                        "display": "Headache"
+                    }
+                ],
+                "text": "Headache"
+            },
+            "subject": {
+                "reference": "Patient/1"
+            },
+            "onsetDateTime": "unknown"
+        }
+    ]
+}
